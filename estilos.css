@@ -5,3 +5,18 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+.container {  display: flex;  flex-direction: row;  justify-content: flex-start;}
+
+div{
+    border: 2px solid #000;
+}
+
+.boton{
+    margin: 15px;
+    color: red;
+}
+#menu{
+    margin: 15px;
+
+}
