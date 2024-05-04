@@ -53,7 +53,7 @@ div{
     background-color: #000400;
 }
 
-.boton{
+.boton{ /* clase para disenio de botones de barra navegacion*/
     background-color: #002904;
     margin: 15px;
     color: white;
@@ -62,7 +62,7 @@ div{
     padding-left: 15px;
     padding-right: 15px;
 }
-#forest{
+#forest{ /* disenio de logo forest, link de navegacion entre paginas*/
     color: white;
     font-size: x-large;
     margin: 15px;
