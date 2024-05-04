@@ -1,7 +1,4 @@
-
-
 /* Estilos generales */
-
 body {
     font-family: 'Roboto', sans-serif; /* Establece una fuente predeterminada para todo el cuerpo del documento */
     font-size: 16px; /* Establece el tamaño de fuente predeterminado para todo el cuerpo del documento */
@@ -13,7 +10,6 @@ body {
 }
 
 /* Estilos para encabezados */
-
 h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Establece una fuente específica para encabezados */
     font-weight: bold; /* Establece el grosor de la fuente para los encabezados */
@@ -22,7 +18,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Estilos para párrafos */
-
 p {
     font-family: 'Roboto', sans-serif ; /* Establece una fuente específica para párrafos */
     font-size: 1em; /* Establece el tamaño de fuente predeterminado para los párrafos */
@@ -31,7 +26,6 @@ p {
 }
 
 /* Estilos para enlaces */
-
 a {
     color: white; /* Establece el color de los enlaces */
     text-decoration: none; /* Elimina la subrayado predeterminado de los enlaces */
@@ -41,23 +35,34 @@ a:hover {
     text-decoration: underline; /* Añade subrayado cuando el enlace está en estado de "hover" */
 }
 
-
-img{
-    max-width: 100%;
-    height: auto;
+.container {
+    overflow: hidden; /* Limpiar el float */
+    margin: 40px auto;
+    max-width: 1000px;
+    position: relative; /* Añade posición relativa para que la altura se base en este contenedor */
 }
 
-.container {  display: flex;  flex-direction: row;  justify-content: flex-start;}
-
-div{
-    border: 2px solid #000;
+.text-column, .image-column {
+    vertical-align: top; /* Alinea ambos elementos en la parte superior */
+    display: inline-block; /* Permite el uso de vertical-align */
+    width: 40%; /* Ancho igual para ambos elementos */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
 }
 
-.boton{
-    margin: 15px;
-    color: red;
+.text-column {
+    padding-right: 20px; /* Espacio entre las columnas */
 }
-#menu{
-    margin: 15px;
 
+.image-column img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+    display: block;
 }
+
+
+.clearfix::after {
+    content: ""; /* Crea un contenido después del último elemento dentro del contenedor */
+    display: table; /* Convierte el contenido en una tabla para forzar el envoltorio */
+    clear: both; /* Limpia todos los flotantes */
+}
+
