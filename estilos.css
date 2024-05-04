@@ -1,6 +1,47 @@
-body{
-    background-color: black;
+
+
+/* Estilos generales */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Establece una fuente predeterminada para todo el cuerpo del documento */
+    font-size: 16px; /* Establece el tamaño de fuente predeterminado para todo el cuerpo del documento */
+    color: azure;
+    line-height: 1.6; /* Establece el espaciado entre líneas para mejorar la legibilidad */
+    background-color: #001702; /* Color dominante Verde Forest*/
+    margin: 0; /* Esto elimina el margen predeterminado del body */
+    padding: 0; /* Esto elimina el relleno predeterminado del body */
 }
+
+/* Estilos para encabezados */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Establece una fuente específica para encabezados */
+    font-weight: bold; /* Establece el grosor de la fuente para los encabezados */
+    color: white; /* Establece el color de texto para los encabezados */
+    margin-bottom: 10px; /* Añade un espacio inferior entre los encabezados y los elementos que les siguen */
+}
+
+/* Estilos para párrafos */
+
+p {
+    font-family: 'Roboto', sans-serif ; /* Establece una fuente específica para párrafos */
+    font-size: 1em; /* Establece el tamaño de fuente predeterminado para los párrafos */
+    line-height: 1.4; /* Establece el espaciado entre líneas para los párrafos */
+    margin-bottom: 20px; /* Añade un espacio inferior entre los párrafos */
+}
+
+/* Estilos para enlaces */
+
+a {
+    color: white; /* Establece el color de los enlaces */
+    text-decoration: none; /* Elimina la subrayado predeterminado de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Añade subrayado cuando el enlace está en estado de "hover" */
+}
+
+
 img{
     max-width: 100%;
     height: auto;
