@@ -50,14 +50,21 @@ img{
 .container {  display: flex;  flex-direction: row;  justify-content: flex-start;}
 
 div{
-    border: 2px solid #000;
+    background-color: #000400;
 }
 
 .boton{
+    background-color: #002904;
     margin: 15px;
-    color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-#menu{
+#forest{
+    color: white;
+    font-size: x-large;
     margin: 15px;
 
 }
