@@ -76,3 +76,6 @@ label {
         margin: 0 auto; /* Establece márgenes automáticos para centrar */
         padding: 0px; 
 }
+.logo{
+    width: 150px;
+}
