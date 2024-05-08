@@ -66,5 +66,13 @@ a:hover {
     color: white;
     font-size: x-large;
     margin: 15px;
-
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.centrado{
+        width: 400px; /* Ancho del div */
+        margin: 0 auto; /* Establece márgenes automáticos para centrar */
+        padding: 0px; 
 }
