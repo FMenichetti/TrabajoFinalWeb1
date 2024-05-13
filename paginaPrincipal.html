@@ -11,12 +11,30 @@
     <div class="container">
         
         <a href="./paginaPrincipal.html" id="forest">
-            <img src="./Imagenes/LOGO_FINAL_004_BLANCO.png" alt="" class="logo"></a>
+            <img src="./Imagenes/logo.png" alt="" class="logo"></a>
         <button class="boton"><a href="./sevicios.html">Servicios</a></button>
         <button class="boton"><a href="./productos.html">Productos</a></button>
         <button class="boton"><a href="./sobreNosotros.html">Sobre nosotros</a></button>
         <button class="boton"><a href="./registro.html">Registarte como cliente</a></button>
     </div>
+<!-- Carrousel -->
+<!-- …
+<img id="demo" class="cont"/>
+…
+<script type="text/javascript">
+ let unaFoto = document.getElementById("demo");
+ unaFoto.src = "foto.jpg";
+ unaFoto.zIndex = -1;//z-index
+</script> -->
+<div id="carrousel" >
+    <button onclick="cambiarImagen(-1)">Anterior</button>
+    <img id="actual" class="fotoCarrousel" src="./Imagenes/web_en_construccion.jpg" alt="">
+    <button onclick="cambiarImagen(1)">Siguiente</button>
+</div>
+<div class="centrado">
+</div>
+
+
 
     <!-- Mapa  -->
     <div class="centrado">

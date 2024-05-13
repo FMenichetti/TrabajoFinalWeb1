@@ -79,3 +79,9 @@ label {
 .logo{
     width: 120px;
 }
+.fotoCarrousel{
+    width: 400px;
+}
+#carrousel{
+    text-align: center;
+}
