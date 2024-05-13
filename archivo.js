@@ -1,7 +1,12 @@
 
 
+//Fotos de carrousel
+let carrousel = ['./Imagenes/Carrusel/carrusel_001.jpg',
+'./Imagenes/Carrusel/carrusel_002.jpg',
+'./Imagenes/Carrusel/carrusel_003.jpg',
+'./Imagenes/Carrusel/carrusel_004.jpg',
+'./Imagenes/Carrusel/carrusel_005.jpg'];
 
-let carrousel= ['./Imagenes/logo.png', './Imagenes/sobreNosotros.jpeg', './Imagenes/web_en_construccion.jpg'];
 let indice = 0;
 
 function cambiarImagen( num ){
