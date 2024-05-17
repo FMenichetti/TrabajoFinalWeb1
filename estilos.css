@@ -4,7 +4,11 @@ body {
     font-size: 16px; /* Establece el tamaño de fuente predeterminado para todo el cuerpo del documento */
     color: azure;
     line-height: 1.6; /* Establece el espaciado entre líneas para mejorar la legibilidad */
-    background-color: #001702; /* Color dominante Verde Forest*/
+    /* background-color: #001702; /* Color dominante Verde Forest*/ 
+    background-image: url('Imagenes/Fondo/Fondo_v003.gif'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* No repite la imagen de fondo */
     margin: 0; /* Esto elimina el margen predeterminado del body */
     padding: 0; /* Esto elimina el relleno predeterminado del body */
 }
@@ -85,3 +89,9 @@ label {
 #carrousel{
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Aumenta el ancho del contenedor al 90% en pantallas pequeñas */
+        padding: 10px; /* Reduce el padding interno del contenedor */
+    }
