@@ -4,7 +4,7 @@ body {
     font-size: 16px; /* Establece el tamaño de fuente predeterminado para todo el cuerpo del documento */
     color: azure;
     line-height: 1.6; /* Establece el espaciado entre líneas para mejorar la legibilidad */
-    background-color: #001702; /* Color dominante Verde Forest*/
+    background-color: black; /* Color dominante Verde Forest*/
     margin: 0; /* Esto elimina el margen predeterminado del body */
     padding: 0; /* Esto elimina el relleno predeterminado del body */
 }
@@ -80,7 +80,7 @@ label {
     width: 120px;
 }
 .fotoCarrousel{
-    width: 900px;
+    width: 800px;
 }
 #carrousel{
     text-align: center;
