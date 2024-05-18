@@ -26,7 +26,26 @@ botonAceptar.addEventListener('submit', function (event) {
 
     }
     clientes.push( cliente );
+    alert("Sus datos se registraron correctamente");
+    //Guardamos los datos para que no se pierdan al redirigir
+    sessionStorage.setItem('clientes', JSON.stringify(clientes));
+    // Redirigimos a pagina ppal
+    window.location.href = './paginaPrincipal.html';
 
 })
 
-console.log({clientes});
+
+
+function verClientes(){
+
+    let storedClientes = sessionStorage.getItem('clientes');
+if (storedClientes) {
+    let clientesArray = JSON.parse(storedClientes);
+    console.log(clientesArray);
+}
+    console.log({clientes});
+
+}
+
+
+verClientes();
