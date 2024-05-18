@@ -1,11 +1,11 @@
 
 
 //Fotos de carrousel
-let carrousel = ['./Imagenes/Carrusel/carrusel_001.jpg',
-'./Imagenes/Carrusel/carrusel_002.jpg',
-'./Imagenes/Carrusel/carrusel_003.jpg',
-'./Imagenes/Carrusel/carrusel_004.jpg',
-'./Imagenes/Carrusel/carrusel_005.jpg'];
+let carrousel = ['./Imagenes/Carrusel/photo1.gif',
+'./Imagenes/Carrusel/photo2.gif',
+'./Imagenes/Carrusel/photo3.gif',
+'./Imagenes/Carrusel/photo4.gif',
+'./Imagenes/Carrusel/photo5.gif'];
 
 let indice = 0;
 
