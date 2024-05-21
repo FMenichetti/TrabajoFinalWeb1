@@ -21,36 +21,38 @@
     <h1>Registro de clientes</h1>
     <div class="centrado">
 
-    <form action="" id="idFormulario" >
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="txtNombre" name="nombre" value="" required class="error">
+    <form action="" id="idFormulario" onsubmit="return validar()">
+
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" id="txtNombre" name="nombre" value=""  class="error">
         
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="txtApellido" name="apellido" required class="error"> 
-        
-        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <label for="txtApellido">Apellido:</label>
+        <input type="text" id="txtApellido" name="apellido"  class="error"> 
+<!--         
+        <label for="calendario">Fecha de Nacimiento:</label>
         <input type="date" id="calendario" name="fecha_nacimiento" required class="error">
-        <input type="number" id="txtEdad" disabled min="13" max="80">
+        <input type="number" id="txtEdad" disabled min="13" max="80"> -->
         
-        <label for="dni">DNI:</label>
-        <input type="text" id="txtDni" name="dni" required class="error">
+        <label for="txtDni">DNI:</label>
+        <input type="text" id="txtDni" name="dni"  class="error">
         
-        <label for="genero">Género:</label>
+        <!-- <label for="rbGenero">Género:</label>
         <select id="rbGenero" name="genero" required class="error">
             <option value="">Selecciona</option>
             <option value="Masculino">Masculino</option>
             <option value="Femenino">Femenino</option>
             <option value="Otro">Otro</option>
-        </select>
+        </select> -->
         
-        <label for="email">Email:</label>
-        <input type="email" id="txtEmail" name="email" required class="error">
+        <label for="txtEmail">Email:</label>
+        <input type="email" id="txtEmail" name="email"  class="error">
         
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="txtTelefono" name="telefono" required  class="error">
+        <label for="txtTelefono">Teléfono:</label>
+        <input type="tel" id="txtTelefono" name="telefono"   class="error">
         
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="txtMensaje" name="mensaje" rows="4" required class="error"></textarea>
+        <label for="txtMensaje" >Mensaje</label>
+        <textarea id="txtMensaje" name="mensaje" rows="4"
+         maxlength="400" placeholder="Maximo 400 caracteres..." class="error"></textarea> 
         
         <input type="submit" value="Enviar">
     </form>
@@ -62,6 +64,5 @@
 
 
 <script src="./clientes.js"></script>
-<script src="./class.js"></script>
 </body>
 </html>
