@@ -1,18 +1,45 @@
 
-let clientes = [];
-let botonAceptar = document.getElementById('idFormulario')
+// function crearLista(){
+//     if ( clientes = undefined ) {
+//     let clientes = [];
+// }
+// }
+
+let botonAceptar = document.getElementById('btnAceptar');
+let txtNombre = document.getElementById('txtNombre')
+let txtApellido = document.getElementById('txtApellido');
+let txtFechaNacimiento = document.getElementById('calendario');
+let txtEdad = document.getElementById('txtEdad');
+let txtDni = document.getElementById('txtDni');
+let txtGenero = document.getElementById('rbGenero');
+let txtEmail = document.getElementById('txtEmail');
+let txtTelefono = document.getElementById('txtTelefono');
+let txtMensaje = document.getElementById('txtMensaje');
+let listaValidaciones = document.getElementById("lstValidaciones");
+
+
+function validar(){
+    listaValidaciones.innerHTML=''; //Limpio la lista de fallas
+    //Remuevo class error de todos los campos
+    txtNombre.classList.remove('error');
+    txtApellido.classList.remove('error');
+    txtFechaNacimiento.classList.remove('error');
+    txtDni.classList.remove('error');
+    txtGenero.classList.remove('error');
+    txtEmail.classList.remove('error');
+    txtTelefono.classList.remove('error');
+    txtMensaje.classList.remove('error');
+    //Creo array de errores 
+    let errores = [];
+    //Verificacion de campos
+    
+
+}
 
 botonAceptar.addEventListener('submit', function (event) {
     
     event.preventDefault();
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let fechaNacimiento = document.getElementById("fecha_nacimiento").value;
-    let dni = document.getElementById("dni").value;
-    let genero = document.getElementById("genero").value;
-    let email = document.getElementById("email").value;
-    let telefono = document.getElementById("telefono").value;
-    let mensaje = document.getElementById("mensaje").value;
+    
 
     let cliente = {
         nombre: nombre,
@@ -36,16 +63,15 @@ botonAceptar.addEventListener('submit', function (event) {
 
 
 
-function verClientes(){
+// function verClientes(){
 
-    let storedClientes = sessionStorage.getItem('clientes');
-if (storedClientes) {
-    let clientesArray = JSON.parse(storedClientes);
-    console.log(clientesArray);
-}
-    console.log({clientes});
+//     let storedClientes = sessionStorage.getItem('clientes');
+// if (storedClientes) {
+//     let clientesArray = JSON.parse(storedClientes);
+//     console.log(clientesArray);
+// }
+//     console.log({clientes});
 
-}
+// }
 
 
-verClientes();
