@@ -56,10 +56,10 @@ function validar(  ){
        } else if(txtMensaje.length > 400) {
         errores.push("Mensaje muy largo (400 caracteres)");
         txtMensaje.classList.add("error");
-       }
+       } 
 
-       if(isNaN(dni)) {
-        errores.push("El Dni deben ser campos numericos");
+       if(isNaN(dni) || dni.length >6) {
+        errores.push("El Dni deben ser campos numericos y mas de 6 digitos");
         txtDni.classList.add("error");
        } 
 

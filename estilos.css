@@ -238,7 +238,7 @@ label {
     .container {
         width: 90%; /* El contenedor ocupa el 90% del ancho de la pantalla */
         padding: 10px; /* Relleno interior del contenedor */
-    }
+    }}
 
     .text-column, .image-column {
         display: block; /* Cada columna ocupa toda la línea */
@@ -261,6 +261,8 @@ label {
 
     .error{
         border: 2px solid red;
-        color: red
+        color: red;
     }
-    
+    .cualquiera{
+        color: #002904;
+    }
