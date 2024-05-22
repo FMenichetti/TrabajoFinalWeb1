@@ -210,11 +210,14 @@ label {
 }
 
 #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
     padding: 2px; /* Ajusta el relleno superior e inferior según sea necesario */
-    margin-bottom: 0px;
+   
 }
 
 .rights-container {
