@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./estilos.css">
 </head>
-<body>
 
-       <!-- Barra de navegacion -->
-    <div class="logo-container">
-        <div class="logo-content">
-            <div id="forest" class="logo-margin">
-                <a href="./paginaPrincipal.html"><img src="./Imagenes/logo.png" alt="Logo de Forest Barbershop" class="logo"></a>
-            </div>
-            <div class="buttons-wrapper">
-                <div class="buttons-container">
-                    <button class="boton"><a href="./sevicios.html">Servicios</a></button>
-                    <button class="boton"><a href="./productos.html">Productos</a></button>
-                    <button class="boton"><a href="./sobreNosotros.html">Sobre nosotros</a></button>
-                    <button class="boton"><a href="./registro.html">Registrarme como cliente</a></button>
+<body>
+    <div class="principal">
+        <!-- Barra de navegacion -->
+        <div class="logo-container">
+            <div class="logo-content">
+                <div id="forest" class="logo-margin">
+                    <a href="./paginaPrincipal.html"><img src="./Imagenes/logo.png" alt="Logo de Forest Barbershop"
+                            class="logo"></a>
+                </div>
+                <div class="buttons-wrapper">
+                    <div class="buttons-container">
+                        <button class="boton"><a href="./sevicios.html">Servicios</a></button>
+                        <button class="boton"><a href="./productos.html">Productos</a></button>
+                        <button class="boton"><a href="./sobreNosotros.html">Sobre nosotros</a></button>
+                        <button class="boton"><a href="./registro.html">Registrarme como cliente</a></button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <h1>Registro de clientes</h1>
+        <div class="centrar">
+
+            <form id="idFormulario" onsubmit="return validar()">
+
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" id="txtNombre" name="nombre" value="" class="error">
+
+                <label for="txtApellido">Apellido:</label>
+                <input type="text" id="txtApellido" name="apellido" class="error">
+
+                <label for="calendario">Fecha de Nacimiento:</label>
+                <input type="date" id="calendario" name="fecha_nacimiento" required>
+
+                <label for="txtDni">DNI:</label>
+                <input type="text" id="txtDni" name="dni" class="error">
+
+                <label for="rbGenero">Género:</label>
+                <select id="rbGenero" name="genero" required">
+                    <option value="">Selecciona</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label for="txtEmail">Email:</label>
+                <input type="email" id="txtEmail" name="email" class="error">
+
+                <label for="txtTelefono">Teléfono:</label>
+                <input type="tel" id="txtTelefono" name="telefono" class="error">
+
+                <label for="txtMensaje">Mensaje</label>
+                <textarea id="txtMensaje" name="mensaje" rows="4" maxlength="400" placeholder="Maximo 400 caracteres..."
+                    class="error"></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+        </div>
+        <ol id="lstValidaciones">
+        </ol>
+        <footer id="footer">
+            <div class="rights-container">
+                <p>Todos los derechos reservados &copy; Forest BarberShop 2024</p>
+            </div>
+        </footer>
     </div>
 
-    <h1>Registro de clientes</h1>
-    <div class="centrado">
-
-    <form  id="idFormulario" onsubmit="return validar()">
-
-        <label for="txtNombre">Nombre:</label>
-        <input type="text" id="txtNombre" name="nombre" value=""  class="error">
-        
-        <label for="txtApellido">Apellido:</label>
-        <input type="text" id="txtApellido" name="apellido"  class="error"> 
-        
-        <label for="calendario">Fecha de Nacimiento:</label>
-        <input type="date" id="calendario" name="fecha_nacimiento" required >
-        <input type="number" id="txtEdad" disabled min="13" max="80"> 
-        
-         <label for="txtDni">DNI:</label>
-        <input type="text" id="txtDni" name="dni"  class="error">
-        
-         <label for="rbGenero">Género:</label>
-        <select id="rbGenero" name="genero" required">
-            <option value="">Selecciona</option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="Otro">Otro</option>
-        </select> 
-        
-         <label for="txtEmail">Email:</label>
-        <input type="email" id="txtEmail" name="email"  class="error">
-        
-        <label for="txtTelefono">Teléfono:</label>
-        <input type="tel" id="txtTelefono" name="telefono"   class="error"> 
-        
-        <label for="txtMensaje" >Mensaje</label>
-        <textarea id="txtMensaje" name="mensaje" rows="4"
-         maxlength="400" placeholder="Maximo 400 caracteres..." class="error"></textarea> 
-        
-        <input type="submit" value="Enviar">
-    </form>
-            
-</div>
-<footer id="footer">
-    <div class="rights-container">
-        <p>Todos los derechos reservados &copy; Forest BarberShop 2024</p>
-    </div>
-</footer>
-
-<ol id="lstValidaciones">
-</ol>
 
 
-<script src="./clientes.js"></script>
+    <script src="./clientes.js"></script>
 </body>
+
 </html>

@@ -42,7 +42,6 @@ function validar(  ){
         txtNombre.classList.add("error");
        }
     
-
        if(apellido.length == 0) {
         errores.push("Falta el apellido");
         txtApellido.classList.add("error");
@@ -76,13 +75,15 @@ function validar(  ){
        }
 
        //Mostrar errores en lista
-       for(let err of errores) {
-        let li = document.createElement("li");
-        li.innerHTML = err;
-        listaValidaciones.appendChild(li);
+       if ( hayErrores( errores ) ) {
+        //Muestro mensajes de error
+        console.log("f");
+       }else{
+        //Oculto form y muestro datos
+        console.log("v");
        }
+       
 
-       alert(`Bienvenido ${ nombre },  nos pone muy contentos que nos hayas eligido como tu barberia de confianza!` )
 return false; //Devuelvo false xq no envio datos a DB
 
 }
@@ -97,6 +98,19 @@ function removerError(){ //Remueve errores de los campos HTML
     txtEmail.classList.remove('error');
      txtTelefono.classList.remove('error');
      txtMensaje.classList.remove('error');
+}
+
+function hayErrores( errores ){
+    if (errores.length === 0) {
+        return false;
+    }else{
+        for(let err of errores) {
+            let li = document.createElement("li");
+            li.innerHTML = err;
+            listaValidaciones.appendChild(li);
+           }
+           return true;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {//Primera carga sin .error
