@@ -1,10 +1,5 @@
 
-// function crearLista(){
-//     if ( clientes = undefined ) {
-//     let clientes = [];
-// }
-// }
-
+//Elementos HTML
 let botonAceptar = document.getElementById('btnAceptar');
 let txtNombre = document.getElementById('txtNombre')
 let txtApellido = document.getElementById('txtApellido');
@@ -17,38 +12,26 @@ let txtTelefono = document.getElementById('txtTelefono');
 let txtMensaje = document.getElementById('txtMensaje');
 let listaValidaciones = document.getElementById("lstValidaciones");
 
-// formulario.addEventListener('submit', function(event) {
-//     event.preventDefault(); // Evita el envío del formulario y el refresco de la página
-//     validar();
-// });
+//Expresiones regulares
+let soloNumeros = /^[1-9]\d{9}$/; //no empieza con 0 y tiene 10 digitos
+let campoEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; //campo email
+
+
 
 
 function validar(  ){
-    console.log('ejecutando validar');
-    listaValidaciones.innerHTML=''; //Limpio la lista de fallas
     //Remuevo class error de todos los campos
-    txtNombre.classList.remove('error');
-    txtApellido.classList.remove('error');
-    txtFechaNacimiento.classList.remove('error');
-    txtDni.classList.remove('error');
-    txtGenero.classList.remove('error');
-    txtEmail.classList.remove('error');
-    txtTelefono.classList.remove('error');
-    txtMensaje.classList.remove('error');
+   removerError();
     //Creo array de errores 
     let errores = [];
     //Verificacion de campos
     let nombre = txtNombre.value.trim(); //por js
     let apellido = txtApellido.value.trim(); // por js
-    // txtFechaNacimiento.value.trim(); //por html
     let dni = txtDni.value.trim(); //ER
-    //let genero = txtGenero.value.trim(); //por html
     let email = txtEmail.value.trim(); //ER
     let telefono = txtTelefono.value.trim(); //ER
-    //let mensaje = txtMensaje.value.trim(); por html
-    //Expresiones regulares
-    let soloNumeros = '^\d+$';
-     let campoEmail = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
+    let mensaje = txtMensaje.value.trim(); //por html
+    
 
     //Validaciones por medio de JS
     if(nombre.length == 0) {
@@ -58,6 +41,7 @@ function validar(  ){
         errores.push("Nombre muy largo (9 caracteres)");
         txtNombre.classList.add("error");
        }
+    
 
        if(apellido.length == 0) {
         errores.push("Falta el apellido");
@@ -66,21 +50,30 @@ function validar(  ){
         errores.push("Apellido muy largo (9 caracteres)");
         txtApellido.classList.add("error");
        }
+    
+       if(mensaje.length == 0) {
+        errores.push("Falta el mensaje");
+        txtMensaje.classList.add("error");
+       } else if(txtMensaje.length > 400) {
+        errores.push("Mensaje muy largo (400 caracteres)");
+        txtMensaje.classList.add("error");
+       }
 
-       if(!isNaN(dni)) {
+       if(isNaN(dni)) {
         errores.push("El Dni deben ser campos numericos");
         txtDni.classList.add("error");
        } 
 
-    //    if ( !campoEmail.test(email) ) {
-    //     errores.push("El campo Email debe contener un Email valido");
-    //     txtEmail.classList.add("error");
-    //    }
+       //Validaciones por medio de ER
+       if ( !campoEmail.test(email) ) {
+        errores.push("El campo Email debe contener un Email valido");
+        txtEmail.classList.add("error");
+       }
     
-    //    if ( !soloNumeros.test( telefono ) ) {
-    //     errores.push("El campo telefono debe contener solo numeros");
-    //     txtTelefono.classList.add("error");
-    //    }
+       if ( !soloNumeros.test(telefono) )  {
+        errores.push("El campo telefono debe contener 10 digitos y no comenzar con 0");
+        txtTelefono.classList.add("error");
+       }
 
        //Mostrar errores en lista
        for(let err of errores) {
@@ -88,9 +81,30 @@ function validar(  ){
         li.innerHTML = err;
         listaValidaciones.appendChild(li);
        }
-return false;
+
+       alert(`Bienvenido ${ nombre },  nos pone muy contentos que nos hayas eligido como tu barberia de confianza!` )
+return false; //Devuelvo false xq no envio datos a DB
 
 }
+
+function removerError(){ //Remueve errores de los campos HTML
+    
+    listaValidaciones.innerHTML=''; //Limpio la lista de fallas
+    //Remuevo class error de todos los campos
+    txtNombre.classList.remove('error');
+    txtApellido.classList.remove('error');
+    txtDni.classList.remove('error');
+    txtEmail.classList.remove('error');
+     txtTelefono.classList.remove('error');
+     txtMensaje.classList.remove('error');
+}
+
+document.addEventListener('DOMContentLoaded', function() {//Primera carga sin .error
+    let errorFields = document.querySelectorAll('.error');
+    errorFields.forEach(function(field) {
+        field.classList.remove('error')
+    })
+    });
 
 // botonAceptar.addEventListener('submit', function (event) {
     
@@ -129,5 +143,3 @@ return false;
 //     console.log({clientes});
 
 // }
-
-
