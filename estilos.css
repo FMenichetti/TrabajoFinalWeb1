@@ -214,7 +214,7 @@ label {
     color: white;
     text-align: center;
     padding: 2px; /* Ajusta el relleno superior e inferior según sea necesario */
-    margin-top: 40px; /* Agrega un margen superior para separarlo del mapa */
+    margin-bottom: 0px;
 }
 
 .rights-container {
