@@ -31,7 +31,7 @@
         <h1>Registro de clientes</h1>
         <div class="centrar">
 
-            <form id="idFormulario" onsubmit="return validar()">
+            <form id="idFormulario" class="ocultar" onsubmit="return validar()">
 
                 <label for="txtNombre">Nombre:</label>
                 <input type="text" id="txtNombre" name="nombre" value="" class="error">
@@ -65,6 +65,9 @@
 
                 <input type="submit" value="Enviar">
             </form>
+            <ul class="ocultar" id="idDatos">
+
+            </ul>
 
         </div>
         <ol id="lstValidaciones" >

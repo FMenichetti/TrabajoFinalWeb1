@@ -12,20 +12,31 @@ Con menú de navegación y enlaces a las demás páginas. OK
 Artículo. Con posibilidad de volver a la página principal. ok
 
 Formulario de contacto ok
+
 Al menos 3 campos. Alguno debe ser distinto a texto. Combinar validaciones de campos obligatorios, longitud máxima y uso de expresiones regulares. ok 
+
 Los datos enviados deben ser validados vía javascript (no basta con HTML5) ok
 
  y en caso de estar bien, se debe agregar html a la página mostrando los datos enviados (usando createElement).
 
 
 En caso de haber errores, deben ser mostrados manipulando el HTML (no usar alertas nativas). ok
+
 Uso de carrousel.
 Debe ser creado por el estudiante, es decir, no de una librería o copiado de un tutorial. ok
+
  La rotación de imágenes debe estar implementada en javascript y usando arrays. ok
+
   Debe tener botones para avanzar y retroceder. Debe ser circular. Es decir que si se avanza desde el último elemento, se debe ir al primero, y si se retrocede desde el primero, volver al último. ok 
+
 Uso de estilos vistos en clase. ok
+
 Debe ser desarrollado por el estudiante, es decir sin uso de frameworks. ok
+
 Cambiar la fuente. Usar margin y padding. ok 
+
 Alguna página debe tener contenido a dos o tres columnas, usando flex. ok
+
 El sitio debe estar subido a Github y se debe utilizar github pages para desplegarlo en la web. ok
+
 El trabajo puede ser realizado de a 2 personas. En cuyo caso aclarar los miembros del grupo en la entrega. Ambos deben ser colaboradores en el proyecto y debe haber constancia de su participación. ok
