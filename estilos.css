@@ -228,9 +228,13 @@ label {
 
 .centrar {
     display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    
+    align-items: flex-start; 
+    gap: 100px;
+    margin-top: 55px;
 }
 
 .centrado {
