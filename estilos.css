@@ -6,16 +6,42 @@ html, body {
 
 /* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: azure;
-    line-height: 1.6;
-    background-image: url('Imagenes/Fondo/Fondo_v003.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Establece la fuente del texto */
+    font-size: 16px; /* Tamaño de fuente del texto */
+    color: azure; /* Color del texto */
+    line-height: 1.6; /* Altura de línea del texto */
+    background-image: url('Imagenes/Fondo/Fondo_v003.gif'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el cuerpo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo */
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+
+.Titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 20px 0; /* Espacio superior e inferior */
+    padding: 2px; /* Relleno alrededor del contenido */
+}
+
+.Titulo h1 {
+    margin: 0; /* Elimina el margen por defecto del h1 */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-size: 2.5em; /* Tamaño del texto */
+    font-style: italic; /* Agrega una fuente cursiva */
+}
+
+.contenedor-Titulo {
+    width: 100%; /* Ancho de la página */
+    height: 100px; /* Altura deseada para el contenedor */
+    background: linear-gradient(to bottom, rgba(194, 255, 189, 0.5), rgba(0, 0, 0, 0)); /* Degradado de negro semitransparente a transparente */
+    position: relative; /* Establece el posicionamiento relativo */
+  
+}
+
+ul {
+    text-align: left;
 }
 
 /* Estilos para encabezados */
@@ -53,7 +79,7 @@ a:hover {
 }
 .logo-container {
     width: 100%; /* Ancho completo de la pantalla */
-    padding: 5px 20px;
+    padding: 3px 20px; /* Reducción del padding vertical */
     box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
     margin-bottom: 20px; /* Ajusta el valor según el espacio que necesites */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradé de negro más oscuro a transparente */
@@ -69,12 +95,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0px; /* Margen inferior */
 }
 .logo {
-    width: 13%; /* Ancho del logo */
+    width: 20%; /* Ancho del logo */
     margin-right: 20px; /* Espacio entre el logo y los botones */
     margin-left: -20%; /* Margen a la izquierda del logo */
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .logo-margin {
     margin-right: 20px; /* Margen a la derecha del logo */
@@ -106,6 +133,72 @@ a:hover {
     display: inline-block; /* Hace que el enlace sea un bloque en línea */
     white-space: nowrap; /* Evita que el texto del enlace se divida en varias líneas */
 }
+.text-product {
+    text-align: center;
+}
+
+.product-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px;
+}
+
+.product-column {
+    flex: 1 1 calc(20% - 40px); /* Ajusta el ancho para que las columnas sean más estrechas */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px; /* Reduce el padding si es necesario */
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.columna-texto {
+    flex: 1; /* La columna de texto ocupará el espacio disponible */
+    padding: 40px; /* Reducir el relleno para ajustarlo */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    color: white; /* Color del texto */
+    position: relative; /* Establece el posicionamiento relativo para los elementos internos */
+}
+
+.imagen-nosotros {
+    flex: 1; /* La columna de imagen ocupará el espacio disponible */
+    padding: 20px; /* Ajusta el relleno alrededor del contenido */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    position: relative; /* Establece el posicionamiento relativo para los elementos internos */
+    margin-right: 20px; /* Ajusta el margen izquierdo */
+    margin-bottom: 30px;
+    max-width: 40%; /* Establece el ancho máximo del contenedor al 50% del contenedor principal */
+}
+
+.imagen-nosotros img {
+    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+}
+
+
+/* Estilo del contenedor semitransparente */
+.imagen-overlay {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 0; /* Posiciona el contenedor en la parte superior */
+    left: 0; /* Posiciona el contenedor en la parte izquierda */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    background: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
 /* Ajuste de columnas para pantallas grandes */
 .text-column, .image-column {
     vertical-align: top; /* Alinea ambos elementos en la parte superior */
@@ -114,10 +207,10 @@ a:hover {
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     margin-bottom: 20px; /* Añade espacio inferior entre las columnas y el siguiente contenido */
 }
-.text-column {
+.columna-text {
     float: left; /* Alinea la columna de texto a la izquierda */
 }
-.image-column img {
+.imagen-nosotros img {
     width: 100%; /* La imagen ocupa el 100% del ancho de la columna */
     height: auto; /* Mantiene la proporción de la imagen */
 }
@@ -149,7 +242,7 @@ label {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
     text-align: center; /* Centra horizontalmente el contenido */
     overflow: hidden; /* Evita el desbordamiento del contenido */
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     
 }
 
@@ -217,7 +310,7 @@ label {
 }
 
 #footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: black;
@@ -232,6 +325,13 @@ label {
     margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
+.como-llegar {
+    font-size: 20px;
+    font-style: italic; /* Cambia la tipografía a cursiva */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 40px auto 40px; /* Margen superior e inferior de 20px y 40px respectivamente, y centrado horizontalmente */
+    width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+}
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 600px) {
