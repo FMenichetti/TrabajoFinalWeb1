@@ -7,29 +7,26 @@
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-    <!-- Barra de navegacion -->
-    <div class="logo-container">
-        <div class="logo-content">
-            <div id="forest" class="logo-margin">
-                <a href="./index.html"><img src="./Imagenes/logo.png" alt="Logo de Forest Barbershop" class="logo"></a>
-                
+    <div class="barra-navegacion">
+            <div id="forest" class="margen-logo">
+                <a href="./index.html"><img src="./Imagenes/logo.png" alt="Logo de Forest Barbershop" class="logo"></a>                
             </div>
-            <div class="buttons-wrapper">
-                <div class="buttons-container">
+            <div class="botones">
+                <div class="contenedor-botones">
                     <button class="boton"><a href="./productos.html">Productos</a></button>
                     <button class="boton"><a href="./sobreNosotros.html">Sobre nosotros</a></button>
                     <button class="boton"><a href="./registro.html">Registrarme como cliente</a></button>
                 </div>
-            </div>
-        </div>
+            </div>      
     </div>
 
     <div class="contenedor-Titulo">
         <div class="Titulo">
             <h1>Bienvenidos, aquí es donde ocurre la magia!</h1>
         </div>
+    </div>    
 
-    <div id="carrousel-container">
+    <div id="contenedor-carrousel">
         <div id="carrousel">
             <div id="imagen-actual">
                 <img id="actual" class="fotoCarrousel" src="./Imagenes/Carrusel/photo1.gif" alt="">
@@ -37,14 +34,14 @@
             <img src="./Imagenes/Botones/boton_atras.png" alt="Anterior" class="boton-anterior" onclick="cambiarImagen(-1)">
             <img src="./Imagenes/Botones/boton_adelante.png" alt="Siguiente" class="boton-siguiente" onclick="cambiarImagen(1)">
         </div>
-        <div class="como-llegar"><h2>¿No sabés como llegar?</h2></div>
-    </div>   
-
-    <!-- Mapa  -->
-    <div class="centrado" style="margin-top: 20px;">
+    </div>
+    <div class="como-llegar">
+        <h2>¿No sabés como llegar?</h2>
+    </div>
+    <div class="centrado">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1659.8780814210568!2d-65.46477502282468!3d-33.689377453745806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16b7e66e80561%3A0x69731d6f7dafcaae!2sForest%20Barber%20Shop!5e0!3m2!1ses!2sar!4v1715632690077!5m2!1ses!2sar" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-   
+    <div class="espacio"></div>
     <script src="./carrousel.js"></script>
 </body>
 </html>

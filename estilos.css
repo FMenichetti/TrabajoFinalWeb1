@@ -8,57 +8,36 @@ body {
 /* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
-    /* Establece la fuente del texto */
     font-size: 16px;
-    /* Tamaño de fuente del texto */
     color: azure;
-    /* Color del texto */
     line-height: 1.6;
-    /* Altura de línea del texto */
-    background-image: url('Imagenes/Fondo/Fondo_v003.gif');
-    /* Imagen de fondo */
+    background-image: url('Imagenes/Fondo/Fondo_v003.gif'); /*Imagen de fondo*/
     background-size: cover;
-    /* Ajusta la imagen de fondo para cubrir todo el cuerpo */
     background-position: center;
-    /* Centra la imagen de fondo */
     background-repeat: repeat;
-    /* Evita que la imagen de fondo se repita */
     min-height: 100vh;
-    /* Establece la altura mínima del cuerpo */
     overflow-x: hidden;
-    /* Oculta el desbordamiento horizontal */
 }
 
 
 .Titulo {
     text-align: center;
-    /* Centra el texto horizontalmente */
     margin: 20px 0;
-    /* Espacio superior e inferior */
     padding: 2px;
-    /* Relleno alrededor del contenido */
 }
 
 .Titulo h1 {
     margin: 0;
-    /* Elimina el margen por defecto del h1 */
     color: rgb(255, 255, 255);
-    /* Color del texto */
     font-size: 2.5em;
-    /* Tamaño del texto */
     font-style: italic;
-    /* Agrega una fuente cursiva */
 }
 
 .contenedor-Titulo {
     width: 100%;
-    /* Ancho de la página */
     height: 100px;
-    /* Altura deseada para el contenedor */
     background: linear-gradient(to bottom, rgba(194, 255, 189, 0.5), rgba(0, 0, 0, 0));
-    /* Degradado de negro semitransparente a transparente */
     position: relative;
-    /* Establece el posicionamiento relativo */
 
 }
 
@@ -74,38 +53,27 @@ h4,
 h5,
 h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* Establece una fuente específica para encabezados */
     font-weight: bold;
-    /* Establece el grosor de la fuente para los encabezados */
     color: white;
-    /* Establece el color de texto para los encabezados */
     margin-bottom: 10px;
-    /* Añade un espacio inferior entre los encabezados y los elementos que les siguen */
 }
 
 /* Estilos para párrafos */
 p {
     font-family: 'Roboto', sans-serif;
-    /* Establece una fuente específica para párrafos */
     font-size: 1em;
-    /* Establece el tamaño de fuente predeterminado para los párrafos */
     line-height: 1.4;
-    /* Establece el espaciado entre líneas para los párrafos */
     margin-bottom: 20px;
-    /* Añade un espacio inferior entre los párrafos */
 }
 
 /* Estilos para enlaces */
 a {
     color: white;
-    /* Establece el color de los enlaces */
     text-decoration: none;
-    /* Elimina la subrayado predeterminado de los enlaces */
 }
 
 a:hover {
     text-decoration: underline;
-    /* Añade subrayado cuando el enlace está en estado de "hover" */
 }
 
 .container {
@@ -114,111 +82,66 @@ a:hover {
     align-items: center;
     flex-grow: 1;
     max-width: 100vw;
-    /* Ancho máximo igual al ancho de la pantalla */
 }
 
-.logo-container {
+.barra-navegacion {
     width: 100%;
-    /* Ancho completo de la pantalla */
     padding: 3px 20px;
-    /* Reducción del padding vertical */
     box-sizing: border-box;
-    /* Incluye el padding y el borde en el ancho total */
     margin-bottom: 20px;
-    /* Ajusta el valor según el espacio que necesites */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-    /* Degradé de negro más oscuro a transparente */
-}
-
-.buttons-container {
-    display: flex;
-    /* Utiliza flexbox para alinear los botones en línea */
-    gap: 40px;
-    /* Espacio entre los botones */
-}
-
-.logo-content {
-    width: 100%;
-    /* Ancho completo del contenedor interno */
-    max-width: 1200px;
-    /* Ancho máximo del contenedor interno */
-    margin: 0 auto;
-    /* Centra el contenedor interno horizontalmente */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0px;
-    /* Margen inferior */
+    justify-content: center;
 }
 
 .logo {
-    width: 20%;
-    /* Ancho del logo */
-    margin-right: 20px;
-    /* Espacio entre el logo y los botones */
-    margin-left: -20%;
-    /* Margen a la izquierda del logo */
+    width: 100px; 
+    height: auto;
+    margin-right: 100px;
+    margin-left: 0;
     margin-top: 5px;
 }
 
-.logo-margin {
-    margin-right: 20px;
-    /* Margen a la derecha del logo */
+.margen-logo {
+    margin-left: 40%;
+    /* Margen a la izquierda del logo */
 }
 
-.buttons-wrapper {
+.botones {
     display: flex;
-    /* Utiliza flexbox para alinear los botones en línea */
     align-items: center;
-    /* Alinea verticalmente los botones con el logo */
 }
 
-.buttons-container {
+.contenedor-botones {
     display: flex;
-    /* Utiliza flexbox para alinear los botones en línea */
     gap: 20px;
-    /* Espacio entre los botones */
 }
 
 .boton {
     background-color: #002904;
-    /* Color de fondo del botón */
     color: white;
-    /* Color del texto del botón */
     border: none;
-    /* Sin borde */
     border-radius: 20px;
-    /* Bordes redondeados */
     padding: 8px 20px;
-    /* Relleno interior del botón */
-    cursor: pointer;
-    /* Cambia el cursor al pasar sobre los botones */
     white-space: nowrap;
-    /* Evita que el texto se divida en varias líneas */
     display: flex;
-    /* Para asegurar que el contenido interno se mantenga en línea */
     align-items: center;
-    /* Centra verticalmente el contenido */
     justify-content: center;
-    /* Centra horizontalmente el contenido */
 }
 
 .boton a {
     color: white;
-    /* Color del texto del enlace */
     text-decoration: none;
-    /* Sin subrayado */
     display: inline-block;
-    /* Hace que el enlace sea un bloque en línea */
     white-space: nowrap;
-    /* Evita que el texto del enlace se divida en varias líneas */
 }
 
-.text-product {
+.tarjeta-descripcion {
     text-align: center;
 }
 
-.product-columns {
+.contenedor-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -226,19 +149,17 @@ a:hover {
     padding: 60px;
 }
 
-.product-column {
+.tarjeta-producto {
     flex: 1 1 calc(20% - 40px);
-    /* Ajusta el ancho para que las columnas sean más estrechas */
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    /* Reduce el padding si es necesario */
+    padding: 50px;
     box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.product-column img {
+.tarjeta-producto img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -247,110 +168,63 @@ a:hover {
 
 .columna-texto {
     flex: 1;
-    /* La columna de texto ocupará el espacio disponible */
     padding: 40px;
-    /* Reducir el relleno para ajustarlo */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
     color: white;
-    /* Color del texto */
     position: relative;
-    /* Establece el posicionamiento relativo para los elementos internos */
 }
 
 .imagen-nosotros {
     flex: 1;
-    /* La columna de imagen ocupará el espacio disponible */
     padding: 20px;
-    /* Ajusta el relleno alrededor del contenido */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
     position: relative;
-    /* Establece el posicionamiento relativo para los elementos internos */
     margin-right: 20px;
-    /* Ajusta el margen izquierdo */
     margin-bottom: 30px;
     max-width: 40%;
-    /* Establece el ancho máximo del contenedor al 50% del contenedor principal */
 }
 
 .imagen-nosotros img {
     max-width: 100%;
-    /* Establece el ancho máximo de la imagen al 100% del contenedor */
     height: auto;
-    /* Mantiene la proporción de la imagen */
     border-radius: 10px;
-    /* Agrega bordes redondeados a la imagen */
 }
 
-
-/* Estilo del contenedor semitransparente */
-.imagen-overlay {
-    position: absolute;
-    /* Establece el posicionamiento absoluto */
-    top: 0;
-    /* Posiciona el contenedor en la parte superior */
-    left: 0;
-    /* Posiciona el contenedor en la parte izquierda */
-    width: 100%;
-    /* Ancho completo del contenedor */
-    height: 100%;
-    /* Altura completa del contenedor */
-    background: rgba(0, 0, 0, 0.5);
-    /* Color de fondo semitransparente */
-    border-radius: 10px;
-    /* Bordes redondeados */
-}
 
 
 /* Ajuste de columnas para pantallas grandes */
 .text-column,
 .image-column {
     vertical-align: top;
-    /* Alinea ambos elementos en la parte superior */
     display: inline-block;
-    /* Permite el uso de vertical-align */
     width: 48%;
-    /* Ancho igual para ambas columnas */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
     margin-bottom: 20px;
-    /* Añade espacio inferior entre las columnas y el siguiente contenido */
 }
 
 .columna-text {
     float: left;
-    /* Alinea la columna de texto a la izquierda */
 }
 
 .imagen-nosotros img {
     width: 100%;
-    /* La imagen ocupa el 100% del ancho de la columna */
     height: auto;
-    /* Mantiene la proporción de la imagen */
 }
 
 #forest {
     color: white;
-    /* Color del texto */
     font-size: x-large;
-    /* Tamaño del texto */
     margin: 15px;
-    /* Margen alrededor del elemento */
 }
 
 /* Estilos para etiquetas de formularios */
 label {
     display: block;
-    /* Cada etiqueta ocupa toda la línea */
     margin-bottom: 5px;
-    /* Espacio inferior entre la etiqueta y el siguiente elemento */
 }
 
 .centrar {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
@@ -360,120 +234,84 @@ label {
 
 .centrado {
     width: 80%;
-    /* Ancho del contenedor */
     height: 300px;
-    /* Alto del contenedor */
     margin: 5px auto;
-    /* Márgenes automáticos para centrar */
     padding: 0;
-    /* Relleno interior */
     border-radius: 10px;
-    /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Sombra */
     text-align: center;
-    /* Centra horizontalmente el contenido */
     overflow: hidden;
-    /* Evita el desbordamiento del contenido */
     margin-bottom: 200px;
 
 }
 
 .centrado iframe {
     width: 100%;
-    /* Ancho del mapa */
     height: 300px;
-    /* Ajusta este valor según necesites */
     border: 0;
-    /* Elimina el borde del mapa */
+}
 
+.espacio {
+    height: 100px;
 }
 
 /* Estilos del carrusel de imágenes */
 .fotoCarrousel {
     width: 100%;
-    /* Ancho del 100% del contenedor padre */
     max-width: 800px;
-    /* Ancho máximo de la imagen */
     margin-top: 0px;
-    /* Ajusta la distancia hacia abajo */
     margin-bottom: 0px;
 }
 
 #carrousel .boton-anterior,
 #carrousel .boton-siguiente {
     margin: 5px;
-    /* Margen alrededor de los botones */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre los botones */
     border: none;
-    /* Elimina el borde */
     background-size: cover;
-    /* La imagen cubrirá todo el botón */
     background-repeat: no-repeat;
-    /* No se repite la imagen */
     background-position: center;
-    /* Centra la imagen en el botón */
 }
 
-#carrousel-container {
+#contenedor-carrousel {
     width: fit-content;
-    /* Ajusta el ancho del contenedor al tamaño de su contenido */
     margin: 0 auto;
-    /* Centra el contenedor */
     margin-bottom: 100px;
 }
 
 /* CSS para aplicar bordes redondeados y sombra al carrusel */
 #carrousel {
     border-radius: 10px;
-    /* Redondea los bordes del carrusel */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Agrega una sombra al carrusel */
     position: relative;
-    /* Necesario para posicionar los botones */
     overflow: hidden;
-    /* Evita que la sombra se desborde */
     height: 490px;
-    /* Ajusta la altura del contenedor al contenido */
 }
 
 /* CSS para ocultar la sombra de las imágenes ocultas */
 #imagen-actual {
     overflow: hidden;
-    /* Evita que la sombra de las imágenes ocultas se muestre */
 }
 
 .boton-anterior,
 .boton-siguiente {
     position: absolute;
-    /* Posiciona los botones de forma absoluta dentro del carrusel */
     top: 50%;
-    /* Coloca el botón en la mitad vertical */
     transform: translateY(-50%);
-    /* Ajusta la posición vertical para centrar el botón */
     width: 80px;
-    /* Ancho deseado para los botones */
     height: auto;
-    /* Mantiene la proporción de la imagen */
     margin: 0 10px;
-    /* Margen a los lados de los botones */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre los botones */
     z-index: 1;
-    /* Asegura que los botones estén sobre la imagen principal */
     padding: 5px;
-    /* Espacio interior para mejorar la interacción */
 }
 
 .boton-anterior {
     left: 0px;
-    /* Posición a la izquierda */
 }
 
 .boton-siguiente {
     right: 0px;
-    /* Posición a la derecha */
 }
 
 #footer {
@@ -484,56 +322,31 @@ label {
     color: white;
     text-align: center;
     padding: 2px;
-    /* Ajusta el relleno superior e inferior según sea necesario */
-
 }
 
 .rights-container {
     max-width: 1000px;
     margin: 0 auto;
-    /* Centra el contenedor horizontalmente */
 }
 
 .como-llegar {
     font-size: 20px;
     font-style: italic;
-    /* Cambia la tipografía a cursiva */
     text-align: center;
-    /* Centra el texto horizontalmente */
     margin: 40px auto 40px;
-    /* Margen superior e inferior de 20px y 40px respectivamente, y centrado horizontalmente */
     width: fit-content;
-    /* Ajusta el ancho del contenedor al contenido */
 }
 
-/* Media queries para pantallas pequeñas */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        /* El contenedor ocupa el 90% del ancho de la pantalla */
-        padding: 10px;
-        /* Relleno interior del contenedor */
-    }
-}
 
 .text-column,
 .image-column {
     display: block;
-    /* Cada columna ocupa toda la línea */
     width: 100%;
-    /* Ancho completo para cada columna */
     margin-bottom: 20px;
-    /* Añade espacio inferior entre las columnas y el siguiente contenido */
-}
-
-.centrado {
-    width: 90%;
-    /* El contenedor centrado ocupa el 90% del ancho de la pantalla */
 }
 
 .fotoCarrousel {
     width: 100%;
-    /* Ancho completo para la imagen del carrusel */
 }
 
 .principal {
