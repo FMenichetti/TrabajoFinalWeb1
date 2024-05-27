@@ -9,7 +9,7 @@ Al menos 3 páginas distintas. OK
 Principal
 Con menú de navegación y enlaces a las demás páginas. OK
 
-Artículo. Con posibilidad de volver a la página principal. ok
+Acrtíulo. Con posibilidad de volver a la página principal. ok
 
 Formulario de contacto ok
 
@@ -17,7 +17,7 @@ Al menos 3 campos. Alguno debe ser distinto a texto. Combinar validaciones de ca
 
 Los datos enviados deben ser validados vía javascript (no basta con HTML5) ok
 
- y en caso de estar bien, se debe agregar html a la página mostrando los datos enviados (usando createElement).
+ y en caso de estar bien, se debe agregar html a la página mostrando los datos enviados (usando createElement). ok
 
 
 En caso de haber errores, deben ser mostrados manipulando el HTML (no usar alertas nativas). ok

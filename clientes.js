@@ -105,6 +105,7 @@ function validar() {
             let li = document.createElement("li");
             li.innerHTML = err;
             listaValidaciones.appendChild(li);
+
         }
     }
 
