@@ -13,8 +13,9 @@ body {
     line-height: 1.6;
     background-image: url('Imagenes/Fondo/Fondo_v003.gif'); /*Imagen de fondo*/
     background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -78,10 +79,11 @@ a:hover {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-grow: 1;
-    max-width: 100vw;
+    flex-direction: column;
+    padding: 60px;
+    gap: 30px;
 }
 
 .barra-navegacion {
@@ -166,12 +168,32 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.columna-texto {
-    flex: 1;
-    padding: 40px;
+.columna-unica {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+}
+
+.sobre-nosotros-imagen {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
     box-sizing: border-box;
-    color: white;
-    position: relative;
+    text-align: center;
+}
+
+.sobre-nosotros-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.columna-texto {
+    flex: 1 1 45%; 
+    padding: 20px;
+    text-align: justify; 
+    margin-right: 15px; 
 }
 
 .imagen-nosotros {
