@@ -20,28 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-
-.Titulo {
-    text-align: center;
-    margin: 20px 0;
-    padding: 2px;
-}
-
-.Titulo h1 {
-    margin: 0;
-    color: rgb(255, 255, 255);
-    font-size: 2.5em;
-    font-style: italic;
-}
-
-.contenedor-Titulo {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(194, 255, 189, 0.5), rgba(0, 0, 0, 0));
-    position: relative;
-
-}
-
 ul {
     text-align: left;
 }
@@ -95,6 +73,11 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.margen-logo {
+    margin-left: 40%;
 }
 
 .logo {
@@ -105,9 +88,15 @@ a:hover {
     margin-top: 5px;
 }
 
-.margen-logo {
-    margin-left: 40%;
-    /* Margen a la izquierda del logo */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 .botones {
@@ -137,6 +126,27 @@ a:hover {
     text-decoration: none;
     display: inline-block;
     white-space: nowrap;
+}
+
+.contenedor-Titulo {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(194, 255, 189, 0.5), rgba(0, 0, 0, 0));
+    position: relative;
+
+}
+
+.Titulo {
+    text-align: center;
+    margin: 20px 0;
+    padding: 2px;
+}
+
+.Titulo h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    font-style: italic;
 }
 
 .tarjeta-descripcion {
@@ -212,18 +222,6 @@ a:hover {
     border-radius: 10px;
 }
 
-
-
-/* Ajuste de columnas para pantallas grandes */
-.text-column,
-.image-column {
-    vertical-align: top;
-    display: inline-block;
-    width: 48%;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
 .columna-text {
     float: left;
 }
@@ -277,24 +275,6 @@ label {
     height: 100px;
 }
 
-/* Estilos del carrusel de imágenes */
-.fotoCarrousel {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-#carrousel .boton-anterior,
-#carrousel .boton-siguiente {
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 #contenedor-carrousel {
     width: fit-content;
     margin: 0 auto;
@@ -315,6 +295,14 @@ label {
     overflow: hidden;
 }
 
+/* Estilos del carrusel de imágenes */
+.fotoCarrousel {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .boton-anterior,
 .boton-siguiente {
     position: absolute;
@@ -327,15 +315,12 @@ label {
     z-index: 1;
     padding: 5px;
 }
-
 .boton-anterior {
     left: 0px;
 }
-
 .boton-siguiente {
     right: 0px;
 }
-
 #footer {
     position: fixed;
     bottom: 0;
@@ -345,12 +330,10 @@ label {
     text-align: center;
     padding: 2px;
 }
-
 .rights-container {
     max-width: 1000px;
     margin: 0 auto;
 }
-
 .como-llegar {
     font-size: 20px;
     font-style: italic;
@@ -358,29 +341,81 @@ label {
     margin: 40px auto 40px;
     width: fit-content;
 }
-
-
-.text-column,
-.image-column {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.fotoCarrousel {
-    width: 100%;
-}
-
 .principal {
     display: flex;
     flex-direction: column;
 }
-
 .error {
     border: 2px solid red;
     color: red;
 }
-
 .ocultar {
     display: none;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Mostrar el icono de menú hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar los botones por defecto */
+    .botones {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Posicionar el menú debajo del icono */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente */
+        padding: 20px;
+        border-radius: 5px;
+        width: 50%; /* Ancho completo */
+        text-align: right;
+        z-index: 100; /* Asegurar que esté por encima del contenido */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+    }
+
+    /* Contenedor de botones en menú hamburguesa */
+    .contenedor-botones {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Estilos simplificados de los botones en menú hamburguesa */
+    .boton {
+        background: none;
+        border: none;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .boton a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Mostrar los botones cuando el menú hamburguesa está activado */
+    .menu-toggle:checked + .menu-icon + .botones {
+        display: flex;
+    }
+
+    .margen-logo {
+        margin-left: 0;
+    }
+
+    #contenedor-carrousel {
+        margin-bottom: 50px;
+    }
+
+    #carrousel {
+        height: auto;
+    }
+
+    .fotoCarrousel {
+        max-width: 100%;
+        height: auto;
+    }
 }
