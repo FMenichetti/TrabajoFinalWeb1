@@ -60,8 +60,9 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 60px;
+    padding: 60px 60px 60px 60px; /* Modifica el padding según sea necesario */
     gap: 30px;
+    margin-top: 0; /* Establece el margen superior a 0 */
 }
 
 .barra-navegacion {
@@ -74,10 +75,6 @@ a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.margen-logo {
-    margin-left: 40%;
 }
 
 .logo {
@@ -158,11 +155,11 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
-    padding: 60px;
+    padding: 20px;
 }
 
 .tarjeta-producto {
-    flex: 1 1 calc(20% - 40px);
+    flex: 1 1 calc(25% - 30px); /* Inicialmente, cada tarjeta ocupa el 25% del espacio disponible */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 50px;
     box-sizing: border-box;
@@ -178,11 +175,13 @@ a:hover {
     margin-bottom: 10px;
 }
 
+
 .columna-unica {
     max-width: 800px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     text-align: justify;
+    margin-top: -120px; /* Establecer margen superior a 0 */
 }
 
 .sobre-nosotros-imagen {
@@ -353,43 +352,56 @@ label {
     display: none;
 }
 
+.contenedor-formulario {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+}
+
+
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Mostrar el icono de menú hamburguesa */
     .menu-icon {
         display: block;
+        margin-left: auto; /* Mover el icono de menú hacia la derecha */
     }
 
     /* Ocultar los botones por defecto */
     .botones {
-        display: none;
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Posicionar el menú debajo del icono */
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente */
-        padding: 20px;
+        top: 33%; /* Posicionar el menú debajo del icono */
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.765); /* Fondo semitransparente */
+        padding: 50px 20px;
         border-radius: 5px;
-        width: 50%; /* Ancho completo */
+        width: 25%; /* Ancho completo */
         text-align: right;
         z-index: 100; /* Asegurar que esté por encima del contenido */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+        overflow-x: hidden; /* Ocultar cualquier desplazamiento horizontal */
     }
 
     /* Contenedor de botones en menú hamburguesa */
     .contenedor-botones {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
+        justify-content: flex-end; /* Alinear los botones al final del contenedor */
+        align-items: flex-end; /* Alinear los botones a la derecha dentro del contenedor */
     }
 
     /* Estilos simplificados de los botones en menú hamburguesa */
     .boton {
         background: none;
         border: none;
-        padding: 10px;
+        padding: 8px;
         color: white;
-        font-size: 18px;
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        text-align: right; /* Justificar el texto a la derecha */
     }
 
     .boton a {
@@ -402,20 +414,148 @@ label {
         display: flex;
     }
 
+    /* Ajustar la barra de navegación para centrar el logo */
+    .barra-navegacion {
+        display: flex;
+        justify-content: space-between; /* Espacio entre los elementos */
+        align-items: center; /* Centrar los elementos verticalmente */
+        position: relative;
+        padding: 0 20px; /* Añadir padding para margen */
+    }
+
     .margen-logo {
-        margin-left: 0;
+        flex-grow: 1; /* Permitir que el contenedor ocupe todo el espacio disponible */
+        display: flex; /* Usar flexbox para centrar el contenido horizontalmente */
+        justify-content: center; /* Centrar horizontalmente */
     }
 
+    /* Ajustar el contenedor del logo para centrarlo */
+    .logo {
+        width: 100px; 
+        height: auto;
+        margin: 0; /* Eliminar los márgenes del logo */
+        margin-top: 10%;
+    }
+
+    /* Ajustar la posición del menú hamburguesa */
+    .menu-icon {
+        position: relative;
+        right: 0;
+        font-size: 30px; /* Tamaño del icono */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el icono para indicar que es interactivo */
+        color: white; /* Color del icono */
+        position: relative; /* Establece la posición relativa para que el z-index funcione */
+        z-index: 999; /* Valor alto para asegurar que el icono esté por encima de otros elementos */
+    }
+
+    .contenedor-Titulo {
+        /* Ajusta el tamaño del contenedor */
+        padding: 5px;
+    }
+
+    .contenedor-Titulo .Titulo h1 {
+        margin-top: -10px; /* Cambia este valor según tus necesidades */
+    }
+    
+    .Titulo h1 {
+        font-size: 26px;
+        font-style: italic;
+    }
+
+    .como-llegar {
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    
     #contenedor-carrousel {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente el contenido */
     }
-
+    
     #carrousel {
+        max-width: 80%;
         height: auto;
     }
-
+    
     .fotoCarrousel {
         max-width: 100%;
         height: auto;
     }
-}
+
+    #imagen-actual {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
+        height: 100%; /* Asegura que la imagen ocupe todo el alto del carrusel */
+        overflow: hidden; /* Oculta cualquier parte de la imagen que se extienda más allá del carrusel */
+    }
+    
+    #actual {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+        height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+    }
+
+    .contenedor-productos {
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .tarjeta-producto {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        padding: 20px; /* Reducir el padding interno */
+        box-sizing: border-box; /* Ajustar el box-sizing para incluir el padding en el cálculo del ancho */
+        text-align: justify; /* Alinear el texto */
+    }
+
+    .tarjeta-producto img {
+        width: 100%; /* Ajustar el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    .tarjeta-descripcion {
+        font-size: 10px; /* Aumentar el tamaño del texto */
+    }
+    .tarjeta-producto h2 {
+        font-size: 22px; /* Tamaño de fuente del título */
+        text-align: center; /* Centrar el texto */
+        letter-spacing: -0.5px; /* Reducir el espacio entre letras */
+        margin-bottom: 5px; /* Reducir el espacio debajo del título */
+    }
+
+    .tarjeta-producto p {
+        font-size: 14px; /* Ajustar el tamaño del texto */
+    }
+
+    .tarjeta-descripcion {
+        text-align: left; /* Alinea el contenido a la izquierda */
+    }
+
+    .tarjeta-producto ul {
+        font-size: 14px; /* Ajustar el tamaño de la fuente de la lista */
+        text-align: left;
+    }
+    
+    .centrar {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar horizontalmente */
+        gap: 20px; /* Espacio entre elementos */
+    }
+
+    .centrar input[type="submit"] {
+        width: 100%;
+    }
+
+    /* Estilos adicionales para el formulario en pantallas pequeñas */
+    #idFormulario {
+        width: 90%; /* Ancho del formulario */
+        max-width: 400px; /* Ancho máximo del formulario */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+    
+ 
+}    
